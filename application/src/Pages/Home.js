@@ -8,6 +8,7 @@ const Container = styled.div`
 width: 100%;
 height: 100vh;
 position: relative;
+background-image: linear-gradient(to right, #434343 0%, black 100%);
 `
 const Main = styled.div`
 position: fixed;

@@ -11,6 +11,7 @@ import Projects from './Pages/Projects'
 import Contact from './Pages/Contact'
 import InputForm from './Pages/InputForm';
 import { AnimatePresence } from "framer-motion";
+import { ThemeProvider } from 'styled-components';
 
 
 const router = createBrowserRouter([
@@ -42,12 +43,23 @@ const router = createBrowserRouter([
 
 
 export default function App() {
+  const theme = {
+    breakpoints:{
+      xs:"0px",
+      sm:"600px",
+      md: '900px',
+      lg:"1200px",
+      xl:"1536px"
+    }
+  }
   return (
     <AnimatePresence>
+      <ThemeProvider theme={theme}>
     <RouterProvider
     router={router}
     fallbackElement={<BigSpinner />}
   />
+  </ThemeProvider>
   </AnimatePresence>
   )
 }
