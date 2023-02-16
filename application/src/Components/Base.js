@@ -7,8 +7,10 @@ import education from '../resources/education.png'
 import user from '../resources/user.png'
 import projects from '../resources/projects.png'
 import { motion } from "framer-motion"
+import Tooltip from '@mui/material/Tooltip';
 
-const Container = styled.div`
+
+const Container = styled(motion.div)`
 margin-top: 8rem;
 width: fit-content;
 display: flex;
@@ -27,38 +29,61 @@ object-fit: contain;
 `
 
 export default function Base() {
+
   return (
     <>
-    <Container >
-    <Link to='/about'>
-       <Icon>
-            <Img src={user}/>
-        </Icon>
-       </Link>
-       <Link to='/education'>
-       <Icon >
-            <Img src={education}/>
-        </Icon>
-       </Link>
-       <Link to='/projects'>
-       <Icon>
-            <Img src={projects}/>
-        </Icon>
-       </Link>
-       <Link to='/'>
-       <Icon>
-            <Img src={document}/>
-        </Icon>
-       </Link>
-       <Link to='/contact'>
-       <Icon>
-            <Img src={call}/>
-        </Icon>
-       </Link>
-      
-   
+      <Container
+        initial={{ scale: 0 }}
+        animate={{ rotate: 0, scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20
+        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <Link to='/about'>
+          <Tooltip title='About'>
+            <Icon>
+              <Img src={user} />
+            </Icon>
+          </Tooltip>
+        </Link>
+        <Link to='/education'>
+          <Tooltip title='Education'>
+            <Icon >
+              <Img src={education} />
+            </Icon>
+          </Tooltip>
+        </Link>
 
-    </Container>
+        <Link to='/projects'>
+          <Tooltip title='Projects'>
+            <Icon>
+              <Img src={projects} />
+            </Icon>
+          </Tooltip>
+        </Link>
+        <Link to='/'>
+          <Tooltip title='resume'>
+            <Icon>
+              <Img src={document} />
+            </Icon>
+          </Tooltip>
+        </Link>
+
+        <Link to='/contact'>
+          <Tooltip title='Contacts'>
+            <Icon>
+              <Img src={call} />
+            </Icon>
+          </Tooltip>
+        </Link>
+
+
+
+      </Container>
     </>
   )
 }

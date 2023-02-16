@@ -57,10 +57,10 @@ export default function Avatar() {
             <Container>
                 <Img src={profilePic}/>
                 <Info onMouseOver={()=>{setWhichComp(!WhichComp);}} onMouseOut={()=>{setWhichComp(!WhichComp);}}>
-                    {WhichComp?"":<Text>TAP HERE</Text>}
+                    {WhichComp?"":<Text>Abhay Madaan</Text>}
                 </Info>
             </Container>
-            <Base />
+            <Base/>
             </Section>
         </>
     )
