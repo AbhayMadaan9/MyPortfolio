@@ -45,7 +45,7 @@ width: 300px;
 height: 300px;
 `
 const Text = styled.h1`
-font-family: 'Oswald', sans-seri f;
+font-family: 'Oswald', sans-serif;
 position: absolute;
 `
 export default function Avatar() {

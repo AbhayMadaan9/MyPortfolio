@@ -52,11 +52,12 @@ width: 24px;
 `
 
 export default function Navbar() {
-  const weeks = ["#MondayFunday", "#TransformationTuesday", " #WorkoutWednesday","#ThankfulThursday","#FearlessFriday","#SaturdayNightFever","#StartupSunday "];
+  const weeks = ["#MondayFunday", "#TransformationTuesday", " #WorkoutWednesday","#ThankfulThursday","#FearlessFriday","#SaturdayNightFever","#StartupSunday"];
   const months = ["January", "February", "March","April","May","June","Juy","August", "September","October","November","December"];
   function getWeek(){
     const event = new Date();
     const ind = event.getDay();
+    if(ind == 0) return weeks[6];
     return weeks[ind-1];
   }
   function getTime(){

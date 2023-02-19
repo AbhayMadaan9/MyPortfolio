@@ -4,7 +4,7 @@ import Avatar from '../Components/Avatar';
 import Navbar from '../Components/Navbar';
 import { motion } from 'framer-motion';
 
-const Container = styled.div`
+const Container = styled(motion.div)`
 width: 100%;
 height: 100vh;
 position: relative;
@@ -36,6 +36,7 @@ export default function Home() {
            right: 30,
            bottom: 30,
          }}
+         whileHover={{ scale: 1.1 }}
         >
           <Navbar/>
           <Avatar/>
