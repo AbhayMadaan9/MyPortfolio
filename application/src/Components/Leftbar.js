@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import Pic from '../resources/LeftBarPhoto.jpg' 
 import call from '../resources/call.png'
 import document from '../resources/document.png'
 import education from '../resources/education.png'
 import user from '../resources/user.png'
 import projects from '../resources/projects.png'
 import {Link }from 'react-router-dom'
+import profilePic from '../resources/profilepic.png'
+
 
 const Container = styled.div`
 display: flex;
@@ -43,7 +44,7 @@ export default function () {
     <Container>
         <Icons>
           <Icon isPic={true}>
-            <Img src={Pic}/>
+            <Img src={profilePic}/>
           </Icon>
           <Icon>
             <Link to='/about'>
