@@ -11,13 +11,13 @@ import Tooltip from '@mui/material/Tooltip';
 
 
 const Container = styled(motion.div)`
-margin-top: 8rem;
 width: fit-content;
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 gap: 3rem;
+margin-top: 6rem;
 `
 const Icon = styled.div`
 

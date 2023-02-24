@@ -6,6 +6,7 @@ import document from '../resources/document.png'
 import education from '../resources/education.png'
 import user from '../resources/user.png'
 import projects from '../resources/projects.png'
+import {Link }from 'react-router-dom'
 
 const Container = styled.div`
 display: flex;
@@ -45,19 +46,27 @@ export default function () {
             <Img src={Pic}/>
           </Icon>
           <Icon>
+            <Link to='/about'>
             <Img src={user}/>
+            </Link>
           </Icon>
           <Icon>
+          <Link to='/education'>
             <Img src={education}/>
+            </Link>
           </Icon>
           <Icon>
+          <Link to='/projects'>
             <Img src={projects}/>
+          </Link>
           </Icon>
           <Icon>
             <Img src={document}/>
           </Icon>
         <Icon>
+        <Link to='/contact'>
             <Img src={call}/>
+          </Link>
           </Icon>
         </Icons>
       

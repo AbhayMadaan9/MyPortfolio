@@ -2,12 +2,14 @@ import React,{useState} from 'react'
 import styled from 'styled-components'
 import profilePic from '../resources/profilepic.png'
 import Base from './Base';
+import Typewriter from 'typewriter-effect';
+
 
 const Section = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: ce;
+justify-content: center;
 `
 const Container = styled.div`
 position: relative;
@@ -48,6 +50,11 @@ const Text = styled.h1`
 font-family: 'Oswald', sans-serif;
 position: absolute;
 `
+const Texts = styled.div`
+font-family: 'Oswald', sans-serif;
+font-size: large;
+font-weight: bold;
+`
 export default function Avatar() {
     const [WhichComp, setWhichComp] = useState(true)
 
@@ -60,6 +67,23 @@ export default function Avatar() {
                     {WhichComp?"":<Text>Abhay Madaan</Text>}
                 </Info>
             </Container>
+            <Texts>
+                <Typewriter
+             options={{
+                strings: ['I am a Programmer', 'I am a Web developer', 'I am a Blockchain developer'],
+                autoStart: true,
+                loop: true,
+              }}
+  onInit={(typewriter) => {
+    typewriter.typeString('Hello World!')
+      .pauseFor(2500)
+      .deleteAll()
+      .start();
+     
+  }}
+/>
+            </Texts>
+  
             <Base/>
             </Section>
         </>
